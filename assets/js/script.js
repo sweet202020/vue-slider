@@ -8,7 +8,8 @@ createApp({
     data(){
         return{
 
-            activeImage: 0,
+            activeImage:0,
+            
             slides : [
                 {
                     image: 'assets/img/01.webp',
@@ -30,10 +31,18 @@ createApp({
                     image: 'assets/img/05.webp',
                     title: "Marvel's Avengers",
                     text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
-                }
+                },
             ],
             
-            
+            methods: {
+                clickPrev(){
+                    
+                    this.activeImage--
+                },
+                clickNext(){
+                    this.activeImage++
+                },
+            },
         }
     }
    
