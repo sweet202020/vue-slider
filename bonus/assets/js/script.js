@@ -16,6 +16,7 @@ createApp({
 
             activeImage:0,
             intervalId:null,
+            
            
             slides : [
                 {
@@ -67,6 +68,9 @@ createApp({
             this.intervalId=setInterval(() => {
                 this.clickNext()
             }, 3000);
+        },
+        setStop(){
+            clearInterval(this.intervalId)
         }
     },
     mounted(){
