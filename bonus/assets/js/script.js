@@ -15,6 +15,7 @@ createApp({
         return{
 
             activeImage:0,
+            intervalId:null,
            
             slides : [
                 {
@@ -62,6 +63,13 @@ createApp({
             this.activeImage=index 
             console.log(index);
         },
+        setPlay(){
+            this.intervalId=setInterval(() => {
+                this.clickNext()
+            }, 3000);
+        }
+    },
+    mounted(){
+        this.setPlay()
     }
-   
 }).mount('#app')
